@@ -9,14 +9,14 @@ class Block {
     this.timestamp = Date.now()
     this.data = data
     this.previousHash = this.checkPreviousHash(previousHash)
-    this.hash = this.buildHash()
+    this.hash = this.calculateHash()
   }
 
   /**
    * Builds hash for current node based on `index`, `timestamp`, `previousHash`, `data`.
    * @return {string} - The encrypted hash.
    */
-  buildHash () {
+  calculateHash () {
     const dataToEncrypt = this.index + this.timestamp + this.previousHash + JSON.stringify(this.data)
     return crypto.createHash('sha256').update(dataToEncrypt).digest('hex')
   }
