@@ -38,6 +38,23 @@ class Blockchain {
   print () {
     console.log(this.chain)
   }
+
+  /**
+   * Checks validation of each block in chain.
+   */
+  isValid () {
+    let i = 1
+
+    for (i; i <= this.chain.length - 1; i++) {
+      const currentBlock = this.chain[i]
+      const previousBlock = this.chain[i - 1]
+
+      if (currentBlock.hash !== currentBlock.calculateHash() ||
+        currentBlock.previousHash !== previousBlock.hash) {
+        throw  new Error('Blockchain is not valid.')
+      }
+    }
+  }
 }
 
 module.exports = new Blockchain()
