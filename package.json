@@ -1,0 +1,49 @@
+{
+  "name": "blockchain-with-js",
+  "description": "Blockchain implemented with js.",
+  "version": "0.0.1",
+  "author": "Narek Hovhannisyan",
+  "bugs": {
+    "url": "https://github.com/narekhovhannisyan/blockchain-with-js/issues"
+  },
+  "contributors": [
+    {
+      "name": "Narek Hovhannisyan",
+      "email": "narekgilmour@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "5.12.1",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.15.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
+    "fixpack": "2.3.1",
+    "jest": "24.1.0"
+  },
+  "engines": {
+    "node": "8.15.0",
+    "npm": "6.4.1"
+  },
+  "homepage": "https://github.com/narekhovhannisyan/blockchain-with-js#readme",
+  "keywords": [
+    "blockchain",
+    "js"
+  ],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/narekhovhannisyan/blockchain-with-js"
+  },
+  "scripts": {
+    "fix-package": "fixpack",
+    "lint": "./node_modules/.bin/eslint ./src ./test ./mock --fix",
+    "lint-no-fix": "./node_modules/.bin/eslint ./src ./test ./mock",
+    "start": "node ./src/bin/www",
+    "test-coverage": "jest --coverage --silent --env=node ./unit",
+    "test-unit": "jest --silent --env=node ./unit",
+    "test-watch": "jest --watch --silent --env=node"
+  }
+}
